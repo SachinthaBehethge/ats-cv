@@ -11,7 +11,7 @@ export default function Home() {
     
    <Navbar/>
    <SimpleGrid bg={"purple"} padding={'5%'} columns={1} gap="40px">
-   <Heading fontSize={'6xl'}>Welcome to the ATS-Friendly CV Builder</Heading>
+   <Heading fontSize={'6xl'} lineHeight={'2rem'}>Welcome to the ATS-Friendly CV Builder</Heading>
       <p>Build professional resumes that get noticed by applicant tracking systems.</p>
       <Link  href="/cv-builder">
         <Button textAlign={'end'} colorScheme="blue" mt={4}>Start Building Your CV</Button>

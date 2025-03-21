@@ -12,7 +12,7 @@ export function Provider(props: ColorModeProviderProps) {
   return (
     <ChakraProvider value={defaultSystem}>
       <ColorModeProvider {...props} />
-      
+      {/* //new update */}
     </ChakraProvider>
   )
 }

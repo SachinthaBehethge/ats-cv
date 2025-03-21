@@ -1,17 +1,25 @@
+import Navbar from "@/components/navbar";
 import { ColorModeButton, ColorModeIcon } from "@/components/ui/color-mode";
-import { Button, HStack } from "@chakra-ui/react";
+import { Box, Button, Grid, Heading, HStack, SimpleGrid } from "@chakra-ui/react";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
   return (
    <>
-  <HStack>
-    <ColorModeButton />
-    <Button colorScheme="blue">Button</Button>
-    <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
-    <Button>Click me</Button>
-
-  </HStack>
+  
+    
+   <Navbar/>
+   <SimpleGrid bg={"purple"} padding={'5%'} columns={1} gap="40px">
+   <Heading fontSize={'6xl'}>Welcome to the ATS-Friendly CV Builder</Heading>
+      <p>Build professional resumes that get noticed by applicant tracking systems.</p>
+      <Link  href="/cv-builder">
+        <Button textAlign={'end'} colorScheme="blue" mt={4}>Start Building Your CV</Button>
+      </Link>
+    </SimpleGrid>
+      
+    
+  
    </>
   );
 }

@@ -1,7 +1,7 @@
 'use client';
 import { forwardRef } from 'react';
 import { Box, Flex, Button,  Stack, IconButton, Heading } from '@chakra-ui/react';
-import { HamburgerIcon, CloseIcon } from '@chakra-ui/icons';
+// import { HamburgerIcon, CloseIcon } from '@chakra-ui/icons';
 import { useState } from 'react';
 import { ColorModeButton } from './ui/color-mode';
 import Link from 'next/link';
@@ -18,7 +18,11 @@ function Navbar() {
         <Link href={'/'}><Heading size="md">ATS-CV</Heading></Link>
         <IconButton
           size="md"
-          children={isOpen ? <CloseIcon /> : <HamburgerIcon />}
+          children= {isOpen ? (
+            <i className="fas fa-times"></i> // Close icon (Font Awesome)
+          ) : (
+            <i className="fas fa-bars"></i> // Hamburger icon (Font Awesome)
+          )}
           aria-label="Toggle Navigation"
           display={{ md: 'none' }}
           onClick={toggleMenu}
